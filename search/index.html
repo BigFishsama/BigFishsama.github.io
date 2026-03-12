@@ -20,7 +20,22 @@
 <meta name="twitter:title" content="搜索">
 <meta name="twitter:description" content=""><link rel="alternate" type="application/json" href="https://demo.stack.cai.im/search/index.json">
     <link rel="shortcut icon" href="/img/avatar.png" />
-<link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
+
+            <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],  
+      displayMath: [['$$', '$$'], ['\\[', '\\]']] 
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+        <link rel="preload" href="/search/index.json" as="fetch" crossorigin="anonymous">
     </head>
     <body class="template-search">
     <script>

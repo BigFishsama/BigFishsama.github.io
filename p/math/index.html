@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="博客创作的基础操作">
-<title>Prelude</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="数论学习笔记">
+<title>Math</title>
 
 
-<link rel="canonical" href="https://demo.stack.cai.im/p/prelude/">
+<link rel="canonical" href="https://demo.stack.cai.im/p/math/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.390cc81d180d80110703ea467e355a4f3a0f44f25d4e957842790824fb5f2ef2.css"><meta property='og:title' content="Prelude">
-<meta property='og:description' content="博客创作的基础操作">
-<meta property='og:url' content='https://demo.stack.cai.im/p/prelude/'>
+<link rel="stylesheet" href="/scss/style.min.390cc81d180d80110703ea467e355a4f3a0f44f25d4e957842790824fb5f2ef2.css"><meta property='og:title' content="Math">
+<meta property='og:description' content="数论学习笔记">
+<meta property='og:url' content='https://demo.stack.cai.im/p/math/'>
 <meta property='og:site_name' content='FishSoup'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-02-20T19:40:30&#43;08:00'/><meta property='article:modified_time' content='2026-02-20T19:40:30&#43;08:00'/>
-<meta name="twitter:title" content="Prelude">
-<meta name="twitter:description" content="博客创作的基础操作">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-11T19:21:30&#43;08:00'/><meta property='article:modified_time' content='2026-03-11T19:21:30&#43;08:00'/>
+<meta name="twitter:title" content="Math">
+<meta name="twitter:description" content="数论学习笔记">
     <link rel="shortcut icon" href="/img/avatar.png" />
 
             <script>
@@ -253,19 +253,10 @@
             <nav class="toc-nav" id="TableOfContents">
                 
   <ol>
-    <li>
-      <ol>
-        <li>
-          <ol>
-            <li><a href="#-创作新文章时"># 创作新文章时</a></li>
-            <li><a href="#-本地浏览博客"># 本地浏览博客</a></li>
-            <li><a href="#-将本地博客内容推送到云端博客"># 将本地博客内容推送到云端博客</a></li>
-            <li><a href="#-头像文件地址"># 头像文件地址</a></li>
-            <li><a href="#-markdown插入图片"># Markdown插入图片</a></li>
-          </ol>
-        </li>
-      </ol>
-    </li>
+    <li><a href="#0x01-整除">0x01 整除</a></li>
+    <li><a href="#0x02-素数">0x02 素数</a></li>
+    <li><a href="#0x03-gcd">0x03 GCD</a></li>
+    <li><a href="#0x04-同余">0x04 同余</a></li>
   </ol>
 
             </nav>
@@ -286,12 +277,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/prelude/">Prelude</a>
+            <a href="/p/math/">Math</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            博客创作的基础操作
+            数论学习笔记
         </h3>
         
     </div>
@@ -312,7 +303,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published" datetime='2026-02-20T19:40:30&#43;08:00'>Friday, February 20, 2026</time>
+                <time class="article-time--published" datetime='2026-03-11T19:21:30&#43;08:00'>Wednesday, March 11, 2026</time>
             </div>
         
 
@@ -339,19 +330,10 @@
             <nav class="toc-nav">
                 
   <ol>
-    <li>
-      <ol>
-        <li>
-          <ol>
-            <li><a href="#-创作新文章时"># 创作新文章时</a></li>
-            <li><a href="#-本地浏览博客"># 本地浏览博客</a></li>
-            <li><a href="#-将本地博客内容推送到云端博客"># 将本地博客内容推送到云端博客</a></li>
-            <li><a href="#-头像文件地址"># 头像文件地址</a></li>
-            <li><a href="#-markdown插入图片"># Markdown插入图片</a></li>
-          </ol>
-        </li>
-      </ol>
-    </li>
+    <li><a href="#0x01-整除">0x01 整除</a></li>
+    <li><a href="#0x02-素数">0x02 素数</a></li>
+    <li><a href="#0x03-gcd">0x03 GCD</a></li>
+    <li><a href="#0x04-同余">0x04 同余</a></li>
   </ol>
 
             </nav>
@@ -362,68 +344,98 @@
     <section class="article-content">
     
     
-    <h1 id="个人博客的操作列表">个人博客的操作列表
-</h1><p>​	目前博客是依赖于github，意味着除了本地访问，就只能通过七根木棍访问（记得需要通过git上传到public才能同步博客）</p>
-<h4 id="-创作新文章时"># 创作新文章时
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd D:\Hugo\my-blog
-</span></span><span class="line"><span class="cl">hugo new content posts/文章文件夹名称/文章名.md
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="-本地浏览博客"># 本地浏览博客
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd D:\Hugo\my-blog
-</span></span><span class="line"><span class="cl">hugo server
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="-将本地博客内容推送到云端博客"># 将本地博客内容推送到云端博客
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd D:\Hugo\my-blog
-</span></span><span class="line"><span class="cl">hugo
-</span></span><span class="line"><span class="cl">cd public
-</span></span><span class="line"><span class="cl">git add .
-</span></span><span class="line"><span class="cl">git commit -m &#34;更新了xxxx&#34;
-</span></span><span class="line"><span class="cl">git push
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="-头像文件地址"># 头像文件地址
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">D:\Hugo\my-blog\assets\img
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="-markdown插入图片"># Markdown插入图片
-</h4><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">![图片 1](image1.jpg)
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+    <h2 id="0x01-整除">0x01 整除
+</h2><p><strong>定义</strong>：若整数 n 除以整数 d 的余数为 0，即 d 能整除 n，则称 $d$ 是 $n$ 的约数，记为 $d \mid n$。</p>
+<p>常用性质：</p>
+<ul>
+<li>
+<p><strong>性质1</strong>：$\begin{aligned}
+a \mid b,b \mid c \Rightarrow a \mid c
+\end{aligned}$</p>
+</li>
+<li>
+<p><strong>性质2</strong>：$\begin{aligned}
+a \mid b \implies a \mid kb.
+\end{aligned}$</p>
+</li>
+<li>
+<p><strong>性质3</strong>：$\begin{aligned}
+a \mid b, a \mid c \Rightarrow a \mid kb \pm lc,
+\end{aligned}$</p>
+</li>
+<li>
+<p><strong>性质4</strong>：$\begin{aligned}
+若 a \mid kb, 且a 与k互质, 则a \mid b
+\end{aligned}$</p>
+</li>
+</ul>
+<p>性质1告诉我们整除满足一种类似结合律的东西；</p>
+<p>性质3是性质2的拓展，需要注意的是性质4告诉我们只有在特定条件下性质2的逆命题才会成立；</p>
+<p>在实际题目中，经常会用性质3去发现新的整除</p>
+<p><strong>例题</strong>：$\begin{aligned}
+x, y, z均为整数, 若11 \mid (7x + 2y - 5z), 求证: 11 \mid (3x - 7y + 12z).
+\end{aligned}$</p>
+<p>​	考虑用性质3去证明，令A=(7x + 2y - 5z),B=(3x - 7y + 12z)，我们希望能凑出来一个C=kA+lB且系数被11整除的形式，发现当k=2,l=-1时，恰好满足。所以11整除C，又因为11整除A，所以可以根据性质3得出11整除B</p>
+<h2 id="0x02-素数">0x02 素数
+</h2><p><strong>素数定理</strong>：设$\pi(x)$为1到x中素数的个数，由于精确公式较为繁琐，只列出一个极限发现
+</p>
+$$
+\begin{aligned}
+\lim_{x\to\infty} \frac{\pi(x)}{\left(\frac{x}{\ln(x)}\right)} = 1
+\end{aligned}
+$$<p>一些推论：</p>
+<ul>
+<li>相邻的两个数字一定互质</li>
+</ul>
+<h2 id="0x03-gcd">0x03 GCD
+</h2><p><strong>裴蜀（Bézout）定理</strong>：设 $a,b$ 是不全为0的整数，则存在无穷多组数对 $(x,y)$，满足不定方程 $ax+by=d$，其中 $d=gcd(a,b)$。</p>
+<p>换句话说，<strong>二元一次方程的结果只会是ab两个系数gcd的整数倍</strong>，这个结论相当关键并且应该经常依靠这个解题</p>
+<ul>
+<li>常用的处理有：将<strong>模数视为 $y$</strong>，转化成不定方程求解问题。</li>
+</ul>
+<p><strong>特别地</strong>，若两个系数互质的话（即 $gcd(a,b)=1$），$ax+by$ 可以表示任意数字</p>
+</br>
+<p>从质因数分解角度理解<strong>GCD与LCM本质</strong>：</p>
+$$\begin{aligned}
+a = p_1^{x_1}p_2^{x_2}\ldots, \quad b = p_1^{y_1}p_2^{y_2}\ldots
+\end{aligned}$$$$a \times b = p_1^{x_1+y_1} p_2^{x_2+y_2} ...$$$$\begin{aligned}
+\text{GCD}(a, b) = p_1^{\min(x_1,y_1)} p_2^{\min(x_2,y_2)} \dots
+\end{aligned}$$$$\begin{aligned}
+a \times b/GCD(a,b) = p_1^{x_1+y_1-\min(x_1,y_1)} \dots = p_1^{\max(x_1,y_1)}  \dots = LCM(a,b)
+\end{aligned}$$</br>
+<p><strong>辗转相减法</strong>求GCD:</p>
+<p>​	之所以先介绍辗转相减是感觉它更接近本质，假设求两数 $A,B$的gcd，我们可以将其分解为</p>
+<p>$A=gcd(A,B)*a,B=gcd(A,B)*b$，由于两数相减，他们的公共因子不会消失，所以我们考虑一直做大减小，直到两数相等或较小数为0（与辗转相除终止条件对应，实际上不过是两数相等时多操作了一次使一个数变成0）。</p>
+<p>我们发现当大数（感觉怎么说也要 $10^{100}$ 这种远超范围需要高精度的数据）取模运算会相当消耗时间（因为在高精度减法和取模复杂度差别巨大），我们考虑用优化的辗转相减法处理，具体的优化部分就是当出现含2的因子时直接除去，就能保证复杂度从O(n)降低到O(logn)了</p>
+<p><strong>辗转相除法</strong>求GCD:</p>
+<p>​	考虑我们有没有办法可以加速大减小这个过程，我们发现取模运算实际上是多次减法，直到一个数<strong>严格小于</strong>另一个数：$\begin{aligned}
+a \bmod b = a - \lfloor a/b \rfloor \cdot b
+\end{aligned}$ ，$gcd(a,b)=gcd(b,a \mod b)$</p>
+<p>因此，它的终止条件就是较小数为0的时候。</p>
+</br>
+<p>以下是一些相关拓展结论</p>
+<ul>
+<li>
+<p><strong>推论1</strong>：对于方程 $ax+by=kd$ ，假设 $a=4,b=6$，会发现x每增加3，y需要维持方程成立就需要减少2，更普遍的来说 $x$ 每增加 $b/d$，$y$ 需要减少 $a/d$，这会在后续扩展欧几里得求方程通解中用到</p>
+</li>
+<li>
+<p><strong>推论2</strong>：$\begin{aligned}
+\forall a, b, z \in \mathbb{N}^*, \gcd(a, b) = 1, \exists x, y \in \mathbb{N}, ax + by = ab - a - b + z
+\end{aligned}$，即两互质的数，不考虑负系数的情况下，表示不出来的最大的数是 $ab-a-b$</p>
+</li>
+</ul>
+
+    <blockquote>
+        <p>证明：待补，目前没找到特别严谨的证明</p>
+
+    </blockquote>
+<ul>
+<li><strong>推论3</strong>：一组数求 $LCM$，需要逐个像求 $GCD$ 一样，直接连乘再除以整个数列的 $GCD$是错误的，原因可以参考上边的本质理解</li>
+<li><strong>推论4</strong>：$gcd(a,b)=d$ 可以化成 $gcd(a/d,b/d)=1$ 变成互质问题，这个推论相当重要</li>
+</ul>
+</br>
+<h2 id="0x04-同余">0x04 同余
+</h2>
 </section>
 
 
