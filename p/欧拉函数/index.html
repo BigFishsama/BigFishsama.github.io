@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="欧拉函数 定义 设 $n$ 是一个正整数，欧拉函数 $phi(n)$ 定义为不超过 $n$ 且与 $n$ 互质的正整数的个数。\n$$phi(n) = \\sum_{i=1}^n [gcd(i,n)=1]$$例题 P2398 https://www.luogu.com.cn/problem/P2398\n$$ \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\gcd(i,j) $$观察欧拉函数定义，我们希望将式子通过它化简，考虑将 $i$ 根据 $gcd$ 的值分类 $$ \\sum_{d=1}^n \\sum_{i=1}^n d \\sum_{j=1}^n [gcd(i,j)=d] $$ 对于$[gcd(i,j)=d]$ 可以利用 $gcd$ 的性质，转化为 $[gcd(i/d,j/d)=1]$\n设 $k=i/d$ , $m=j/d$ $$ \\sum_{d=1}^n \\sum_{k=1}^{n/d} d \\sum_{m=1}^{n/d} [gcd(k,m)=1] $$ \u200b\t这是用欧拉函数化简的极限，接下来的处理需要用到莫比乌斯反演\nP2303 https://www.luogu.com.cn/problem/P2303\n$$ \\sum_{i=1}^n \\gcd(i,n) $$思路同上： $$ \\sum_{d|n} d\\sum_{i=1}^n[gcd(i,n)=d] $$$$ \\sum_{d|n} d\\sum_{i=1}^{n}[gcd(i/d,n/d)=1] $$令 $k=i/d$, $m=n/d$得： ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="欧拉函数 #0x00 定义 设 $n$ 是一个正整数，欧拉函数 $phi(n)$ 定义为不超过 $n$ 且与 $n$ 互质的正整数的个数。\n$$phi(n) = \\sum_{i=1}^n [gcd(i,n)=1]$$例题 P2398 https://www.luogu.com.cn/problem/P2398\n$$ \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\gcd(i,j) $$观察欧拉函数定义，我们希望将式子通过它化简，考虑将 $i$ 根据 $gcd$ 的值分类 $$ \\sum_{d=1}^n \\sum_{i=1}^n d \\sum_{j=1}^n [gcd(i,j)=d] $$ 对于$[gcd(i,j)=d]$ 可以利用 $gcd$ 的性质，转化为 $[gcd(i/d,j/d)=1]$\n设 $k=i/d$ , $m=j/d$ $$ \\sum_{d=1}^n \\sum_{k=1}^{n/d} d \\sum_{m=1}^{n/d} [gcd(k,m)=1] $$ \u200b\t这是用欧拉函数化简的极限，接下来的处理需要用到莫比乌斯反演\nP2303 https://www.luogu.com.cn/problem/P2303\n$$ \\sum_{i=1}^n \\gcd(i,n) $$思路同上： $$ \\sum_{d|n} d\\sum_{i=1}^n[gcd(i,n)=d] $$$$ \\sum_{d|n} d\\sum_{i=1}^{n}[gcd(i/d,n/d)=1] $$令 $k=i/d$, $m=n/d$得： ">
 <title>欧拉函数</title>
 
 
@@ -13,12 +13,12 @@
 
 
 <link rel="stylesheet" href="/scss/style.min.390cc81d180d80110703ea467e355a4f3a0f44f25d4e957842790824fb5f2ef2.css"><meta property='og:title' content="欧拉函数">
-<meta property='og:description' content="欧拉函数 定义 设 $n$ 是一个正整数，欧拉函数 $phi(n)$ 定义为不超过 $n$ 且与 $n$ 互质的正整数的个数。\n$$phi(n) = \\sum_{i=1}^n [gcd(i,n)=1]$$例题 P2398 https://www.luogu.com.cn/problem/P2398\n$$ \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\gcd(i,j) $$观察欧拉函数定义，我们希望将式子通过它化简，考虑将 $i$ 根据 $gcd$ 的值分类 $$ \\sum_{d=1}^n \\sum_{i=1}^n d \\sum_{j=1}^n [gcd(i,j)=d] $$ 对于$[gcd(i,j)=d]$ 可以利用 $gcd$ 的性质，转化为 $[gcd(i/d,j/d)=1]$\n设 $k=i/d$ , $m=j/d$ $$ \\sum_{d=1}^n \\sum_{k=1}^{n/d} d \\sum_{m=1}^{n/d} [gcd(k,m)=1] $$ \u200b\t这是用欧拉函数化简的极限，接下来的处理需要用到莫比乌斯反演\nP2303 https://www.luogu.com.cn/problem/P2303\n$$ \\sum_{i=1}^n \\gcd(i,n) $$思路同上： $$ \\sum_{d|n} d\\sum_{i=1}^n[gcd(i,n)=d] $$$$ \\sum_{d|n} d\\sum_{i=1}^{n}[gcd(i/d,n/d)=1] $$令 $k=i/d$, $m=n/d$得： ">
+<meta property='og:description' content="欧拉函数 #0x00 定义 设 $n$ 是一个正整数，欧拉函数 $phi(n)$ 定义为不超过 $n$ 且与 $n$ 互质的正整数的个数。\n$$phi(n) = \\sum_{i=1}^n [gcd(i,n)=1]$$例题 P2398 https://www.luogu.com.cn/problem/P2398\n$$ \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\gcd(i,j) $$观察欧拉函数定义，我们希望将式子通过它化简，考虑将 $i$ 根据 $gcd$ 的值分类 $$ \\sum_{d=1}^n \\sum_{i=1}^n d \\sum_{j=1}^n [gcd(i,j)=d] $$ 对于$[gcd(i,j)=d]$ 可以利用 $gcd$ 的性质，转化为 $[gcd(i/d,j/d)=1]$\n设 $k=i/d$ , $m=j/d$ $$ \\sum_{d=1}^n \\sum_{k=1}^{n/d} d \\sum_{m=1}^{n/d} [gcd(k,m)=1] $$ \u200b\t这是用欧拉函数化简的极限，接下来的处理需要用到莫比乌斯反演\nP2303 https://www.luogu.com.cn/problem/P2303\n$$ \\sum_{i=1}^n \\gcd(i,n) $$思路同上： $$ \\sum_{d|n} d\\sum_{i=1}^n[gcd(i,n)=d] $$$$ \\sum_{d|n} d\\sum_{i=1}^{n}[gcd(i/d,n/d)=1] $$令 $k=i/d$, $m=n/d$得： ">
 <meta property='og:url' content='https://demo.stack.cai.im/p/%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0/'>
 <meta property='og:site_name' content='FishSoup'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-12T13:06:49&#43;08:00'/><meta property='article:modified_time' content='2026-03-12T13:06:49&#43;08:00'/>
 <meta name="twitter:title" content="欧拉函数">
-<meta name="twitter:description" content="欧拉函数 定义 设 $n$ 是一个正整数，欧拉函数 $phi(n)$ 定义为不超过 $n$ 且与 $n$ 互质的正整数的个数。\n$$phi(n) = \\sum_{i=1}^n [gcd(i,n)=1]$$例题 P2398 https://www.luogu.com.cn/problem/P2398\n$$ \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\gcd(i,j) $$观察欧拉函数定义，我们希望将式子通过它化简，考虑将 $i$ 根据 $gcd$ 的值分类 $$ \\sum_{d=1}^n \\sum_{i=1}^n d \\sum_{j=1}^n [gcd(i,j)=d] $$ 对于$[gcd(i,j)=d]$ 可以利用 $gcd$ 的性质，转化为 $[gcd(i/d,j/d)=1]$\n设 $k=i/d$ , $m=j/d$ $$ \\sum_{d=1}^n \\sum_{k=1}^{n/d} d \\sum_{m=1}^{n/d} [gcd(k,m)=1] $$ \u200b\t这是用欧拉函数化简的极限，接下来的处理需要用到莫比乌斯反演\nP2303 https://www.luogu.com.cn/problem/P2303\n$$ \\sum_{i=1}^n \\gcd(i,n) $$思路同上： $$ \\sum_{d|n} d\\sum_{i=1}^n[gcd(i,n)=d] $$$$ \\sum_{d|n} d\\sum_{i=1}^{n}[gcd(i/d,n/d)=1] $$令 $k=i/d$, $m=n/d$得： ">
+<meta name="twitter:description" content="欧拉函数 #0x00 定义 设 $n$ 是一个正整数，欧拉函数 $phi(n)$ 定义为不超过 $n$ 且与 $n$ 互质的正整数的个数。\n$$phi(n) = \\sum_{i=1}^n [gcd(i,n)=1]$$例题 P2398 https://www.luogu.com.cn/problem/P2398\n$$ \\sum_{i=1}^{n} \\sum_{j=1}^{n} \\gcd(i,j) $$观察欧拉函数定义，我们希望将式子通过它化简，考虑将 $i$ 根据 $gcd$ 的值分类 $$ \\sum_{d=1}^n \\sum_{i=1}^n d \\sum_{j=1}^n [gcd(i,j)=d] $$ 对于$[gcd(i,j)=d]$ 可以利用 $gcd$ 的性质，转化为 $[gcd(i/d,j/d)=1]$\n设 $k=i/d$ , $m=j/d$ $$ \\sum_{d=1}^n \\sum_{k=1}^{n/d} d \\sum_{m=1}^{n/d} [gcd(k,m)=1] $$ \u200b\t这是用欧拉函数化简的极限，接下来的处理需要用到莫比乌斯反演\nP2303 https://www.luogu.com.cn/problem/P2303\n$$ \\sum_{i=1}^n \\gcd(i,n) $$思路同上： $$ \\sum_{d|n} d\\sum_{i=1}^n[gcd(i,n)=d] $$$$ \\sum_{d|n} d\\sum_{i=1}^{n}[gcd(i/d,n/d)=1] $$令 $k=i/d$, $m=n/d$得： ">
     <link rel="shortcut icon" href="/img/avatar.png" />
 
             <script>
@@ -253,16 +253,38 @@
             <nav class="toc-nav" id="TableOfContents">
                 
   <ol>
-    <li><a href="#欧拉函数">欧拉函数</a>
+    <li><a href="#0x00-定义">#0x00 定义</a>
       <ol>
         <li>
           <ol>
-            <li><a href="#定义">定义</a></li>
             <li><a href="#例题">例题</a></li>
-            <li><a href="#定理1">定理1</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#0x01-定理1">#0x01 定理1</a>
+      <ol>
+        <li>
+          <ol>
             <li><a href="#例题-1">例题</a></li>
-            <li><a href="#定理2">定理2</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#0x02-定理2">#0x02 定理2</a>
+      <ol>
+        <li>
+          <ol>
             <li><a href="#例题-2">例题</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#0x03-欧拉定理">#0x03 欧拉定理</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#例题-3">例题</a></li>
           </ol>
         </li>
       </ol>
@@ -336,16 +358,38 @@
             <nav class="toc-nav">
                 
   <ol>
-    <li><a href="#欧拉函数">欧拉函数</a>
+    <li><a href="#0x00-定义">#0x00 定义</a>
       <ol>
         <li>
           <ol>
-            <li><a href="#定义">定义</a></li>
             <li><a href="#例题">例题</a></li>
-            <li><a href="#定理1">定理1</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#0x01-定理1">#0x01 定理1</a>
+      <ol>
+        <li>
+          <ol>
             <li><a href="#例题-1">例题</a></li>
-            <li><a href="#定理2">定理2</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#0x02-定理2">#0x02 定理2</a>
+      <ol>
+        <li>
+          <ol>
             <li><a href="#例题-2">例题</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#0x03-欧拉定理">#0x03 欧拉定理</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#例题-3">例题</a></li>
           </ol>
         </li>
       </ol>
@@ -360,9 +404,9 @@
     <section class="article-content">
     
     
-    <h2 id="欧拉函数">欧拉函数
-</h2><h4 id="定义">定义
-</h4><p>设 $n$ 是一个正整数，欧拉函数 $phi(n)$ 定义为不超过 $n$ 且与 $n$ 互质的正整数的个数。</p>
+    <h1 id="欧拉函数">欧拉函数
+</h1><h2 id="0x00-定义">#0x00 定义
+</h2><p>设 $n$ 是一个正整数，欧拉函数 $phi(n)$ 定义为不超过 $n$ 且与 $n$ 互质的正整数的个数。</p>
 $$phi(n) = \sum_{i=1}^n [gcd(i,n)=1]$$<h4 id="例题">例题
 </h4><h5 id="p2398">P2398
 </h5>
@@ -410,7 +454,10 @@ $$
 \sum_{d|n} d\sum_{k=1}^{m}[gcd(k,m)=1]
 $$$$
 \sum_{d|n} d*phi(n/d)
-$$<div class="highlight"><div class="chroma">
+$$<p>
+<details>
+    <summary>查看代码</summary>
+    <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -463,16 +510,14 @@ $$<div class="highlight"><div class="chroma">
 </span><span class="lnt">49
 </span><span class="lnt">50
 </span><span class="lnt">51
-</span><span class="lnt">52
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define int long long
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define debug(x) cout&lt;&lt;#x&lt;&lt;&#39;:&#39;&lt;&lt;x&lt;&lt;&#39; &#39;;
 </span></span></span><span class="line"><span class="cl"><span class="cp">#define N
 </span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">T</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">getphi</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
@@ -520,7 +565,9 @@ $$<div class="highlight"><div class="chroma">
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h5 id="p2568">P2568
+</div>
+</details></p>
+<h5 id="p2568">P2568
 </h5>
     <blockquote>
         <p><a class="link" href="https://www.luogu.com.cn/problem/P2568"  target="_blank" rel="noopener"
@@ -676,10 +723,10 @@ $$<div class="highlight"><div class="chroma">
     </blockquote>
 $$
 \sum_{i=l}^{r} \text{qiandao}(i)\mod 666623333
-$$<p>注意到 $l,r$ 范围虽然很大，但是 $r-l$ 的值在可处理数据规模内，我们考虑求区间素数一样的线性筛思路</p>
+$$<p>注意到 $l,r$ 范围虽然很大，但是 $r-l$ 的值在可处理数据规模内，我们考虑求区间素数一样的线性筛思路。我们发现一个数的 $\phi$ 是由它的因数决定的，</p>
 </br>
-<h4 id="定理1">定理1
-</h4><p>$phi(p)$ 是积性函数，满足对于 $gcd(p,q)=1$，$phi(pq)=phi(p)*phi(q)$</p>
+<h2 id="0x01-定理1">#0x01 定理1
+</h2><p>$phi(p)$ 是积性函数，满足对于 $gcd(p,q)=1$，$phi(pq)=phi(p)*phi(q)$</p>
 <ul>
 <li>$phi(p)=p-1$，$p$ 是素数</li>
 <li>$phi(p^k)=p^{k-1}<em>phi(p)=p</em>phi(p^{k-1})$，$p$ 可以是任何数</li>
@@ -947,9 +994,33 @@ $$<p>实际上，上述变化过程麻烦了，因为我错误的把<strong>定�
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></br>
-<h4 id="定理2">定理2
-</h4><p>设 $n$ 为正整数，那么
+</div><p><strong>P4388</strong></p>
+
+    <blockquote>
+        <p><a class="link" href="https://www.luogu.com.cn/problem/P4388"  target="_blank" rel="noopener"
+    >https://www.luogu.com.cn/problem/P4388</a></p>
+
+    </blockquote>
+<p>​	对于这个问题，将其等价为从左下到右上的情况后，会首先考虑一个问题，怎么快速判断一个矩形有多少方块被经过。首先，经过举例子打表发现，若两边互质，则不会有格点被经过。所以我们可以将不互质的情况（即经过格点的情况），分解为一个个互质的图再累加起来。对于两边互质的情况，我们发现，因为不会经过格点，所以可以看作是只能进行上下左右移动的情况，所以经过的方格一定是 $n+m-1$ 。对于更一般的情况，$\gcd (n,m)=d$ ,经过的方格数为 $\sum =d*(\frac{n}{d}+\frac{m}{d}-1)=n+m-d=N$ 。</br></p>
+<p>​	题目中给定了 $N$ ，要求我们求出满足条件的 $(n,m)$ 个数。我们考虑枚举 $d$ ，虽然我们定义的 $d$ 是 $n,m$ 的因数，但是在上式中会发现 $d$ 也一定是 $N$ 的因数，所以我们枚举 $N$ 的因数 $d&rsquo;$，然后再由 $n+m=N+d $ 枚举 $n,m$ ，并且满足 $\gcd (n,m)=d$ 即可。用式子表示就是在求：
+</p>
+$$
+\sum _{d|N}\sum_{n=1}^{N} [\gcd(n,N+d-n)=d]
+$$<p>
+这时候需要对 $gcd$ 的性质非常有感觉，因为上式必须把一个其中的参数变为常量才方便套用欧拉函数，等价于：
+</p>
+$$
+\sum _{d|N}\sum_{n=1}^{N} [\gcd(n,N+d)=d]
+$$$$
+\sum _{d|N}\sum_{n'=1}^{\frac{N}{d}} [\gcd(n',N/d+1)=1],n'=n/d
+$$$$
+\sum _{d|N}\phi(\frac{N}{d}+1)
+$$$$
+\sum _{d|N}\phi(d+1)
+$$<p>此时我们发现结果出错了，这时候发现题目中 $(n,m)$ 与 $(m,n)$ 等价，特殊处理一下即可。</p>
+</br>
+<h2 id="0x02-定理2">#0x02 定理2
+</h2><p>设 $n$ 为正整数，那么
 </p>
 $$
 n=\sum_{d|n} phi(d)
@@ -1419,6 +1490,391 @@ $$<div class="highlight"><div class="chroma">
 </span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">init</span><span class="p">(</span><span class="mi">1000000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">T</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">T</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">T</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">solve</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="0x03-欧拉定理">#0x03 欧拉定理
+</h2><p>**欧拉定理：**设 $m$ 是一个正整数， $a$ 是一个整数且 <strong>$a$ 与 $m$ 互素</strong>，即 $\gcd(a,m)=1$，则有 $a^{\phi(m)} \equiv 1(\bmod m)$。</p>
+<p>这个定理有以下两个应用点：</p>
+<ul>
+<li>此定理将同余式，或者说将取模运算，整除运算和欧拉函数联系在了一起。</li>
+<li>此定理可以用于处理未知量在指数的情况下，也就是将指数和底数与欧拉函数联系在一起。</li>
+</ul>
+</br>
+<h4 id="例题-3">例题
+</h4><p><strong>P10496</strong></p>
+<p>一个数字所有位数都是数字 $i$ 的数可以表示为：
+</p>
+$$
+\frac{10^x-1}{9}*i
+$$<p>
+此题可以表示为找到最小的 $x$ 使其满足：
+</p>
+$$
+L |\frac{10^x-1}{9}*8
+$$$$
+9L |(10^x-1)*8
+$$<p>转化为同余式：
+</p>
+$$
+(10^x-1)*8 \equiv 0(\bmod 9L)
+$$<p>
+定义 $d=\gcd(9L,8)$
+</p>
+$$
+10^x \equiv 1(\bmod \frac{9L}{d})
+$$<p>
+我们知道欧拉定理告诉我们，当且仅当 $\gcd(10,\frac{9L}{d})=1$时，等式成立，但是题目要求的是 $x$ 满足条件的最小值，其实可以感性理解以下，可能会存在更小的值 $x$ 满足这个式子，由积性函数的性质得，一定是 $\phi(\frac{9L}{d})$ 的因数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define int __int128
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define debug(x) cout&lt;&lt;#x&lt;&lt;&#39;:&#39;&lt;&lt;x&lt;&lt;&#39; &#39;;
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define N
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">T</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">__int128</span> <span class="nf">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">__int128</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">ch</span> <span class="o">&lt;</span> <span class="sc">&#39;0&#39;</span> <span class="o">||</span> <span class="n">ch</span> <span class="o">&gt;</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">ch</span> <span class="o">==</span> <span class="sc">&#39;-&#39;</span><span class="p">)</span> <span class="n">f</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ch</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">ch</span> <span class="o">&gt;=</span> <span class="sc">&#39;0&#39;</span> <span class="o">&amp;&amp;</span> <span class="n">ch</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">ch</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ch</span> <span class="o">=</span> <span class="n">getchar</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">__int128</span> <span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">9</span><span class="p">)</span> <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">putchar</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="o">+</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">ygcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">b</span><span class="o">?</span><span class="n">ygcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span><span class="o">:</span><span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">qpow</span><span class="p">(</span><span class="kt">int</span> <span class="n">u1</span><span class="p">,</span><span class="kt">int</span> <span class="n">u2</span><span class="p">,</span><span class="kt">int</span> <span class="n">modd</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">u2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">u2</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">=</span><span class="n">res</span><span class="o">*</span><span class="n">u1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">%=</span><span class="n">modd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">u1</span><span class="o">*=</span><span class="n">u1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">u1</span><span class="o">%=</span><span class="n">modd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">u2</span><span class="o">&gt;&gt;=</span><span class="mi">1ll</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">getphi</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">t</span><span class="o">*</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="n">t</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">=</span><span class="n">res</span><span class="o">/</span><span class="n">t</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="n">t</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">n</span><span class="o">/=</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="n">res</span><span class="o">=</span><span class="n">res</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">mod</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">Y</span><span class="o">=</span><span class="mi">1</span><span class="p">;;</span><span class="o">++</span><span class="n">Y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span><span class="o">=</span><span class="n">read</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">n</span><span class="o">=</span><span class="mi">9</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="n">ygcd</span><span class="p">(</span><span class="mi">9</span><span class="o">*</span><span class="n">n</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">ygcd</span><span class="p">(</span><span class="mi">10ll</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">!=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;Case &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">print</span><span class="p">(</span><span class="n">Y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;: &#34;</span><span class="o">&lt;&lt;</span><span class="mi">0</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">u1</span><span class="o">=</span><span class="n">getphi</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="n">u1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">t</span><span class="o">*</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">u1</span><span class="p">;</span><span class="o">++</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">u1</span><span class="o">%</span><span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">qpow</span><span class="p">(</span><span class="mi">10ll</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ans</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span><span class="o">=</span><span class="n">u1</span><span class="o">/</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span><span class="p">(</span><span class="n">qpow</span><span class="p">(</span><span class="mi">10ll</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ans</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;Case &#34;</span><span class="p">;</span><span class="n">print</span><span class="p">(</span><span class="n">Y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;: &#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">print</span><span class="p">(</span><span class="n">ans</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">signed</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">T</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// cin&gt;&gt;T;
+</span></span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">T</span><span class="o">--</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">solve</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>P14582</strong></p>
+<p>题目保证了 $0$ 数字不会被扣除，这样就保证了上一题中的 $\gcd(10,\frac{9L}{d})=1$ ，因为我们总是可以在数字末尾添加若干个 $0$。</p>
+<p>现在我们一定可以构造出单个数字加上若干个 $0$ 满足题意的数字，因此无解情况只有 $k=9$ 的时候。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define int long long
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define debug(x) cout&lt;&lt;#x&lt;&lt;&#39;:&#39;&lt;&lt;x&lt;&lt;&#39; &#39;;
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define N
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">T</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">v</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">getphi</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="o">++</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="n">t</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">=</span><span class="n">res</span><span class="o">/</span><span class="n">t</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="n">t</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">n</span><span class="o">/=</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="n">res</span><span class="o">=</span><span class="n">res</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">m</span><span class="p">,</span><span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">m</span><span class="o">&gt;&gt;</span><span class="n">k</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">t</span><span class="o">&lt;=</span><span class="mi">9</span><span class="p">;</span><span class="o">++</span><span class="n">t</span><span class="p">)</span> <span class="n">v</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">t</span><span class="o">&lt;=</span><span class="n">k</span><span class="p">;</span><span class="o">++</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">u1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">u1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="p">[</span><span class="n">u1</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">m</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">m</span><span class="o">/=</span><span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">m</span><span class="o">%</span><span class="mi">5</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="n">m</span><span class="o">/=</span><span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">k</span><span class="o">==</span><span class="mi">9</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;-</span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">t</span><span class="o">&lt;=</span><span class="mi">9</span><span class="p">;</span><span class="o">++</span><span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="mi">2</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="o">&lt;&lt;</span><span class="n">t</span><span class="o">&lt;&lt;</span><span class="sc">&#39; &#39;</span><span class="o">&lt;&lt;</span><span class="mi">27</span><span class="o">*</span><span class="n">getphi</span><span class="p">(</span><span class="n">m</span><span class="o">/</span><span class="n">gcd</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">t</span><span class="p">))</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="o">&lt;&lt;</span><span class="s">&#34;0 114514&#34;</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">signed</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">T</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">T</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">T</span><span class="o">--</span><span class="p">)</span>
